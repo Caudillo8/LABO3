@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Formulario html</title>
+</head>
+<body>
+    <form action="./respuestaFormulario.html" target="_blank"  method="get">
+        <h1>Formulario para entradas sin validación</h1>
+        <ul>
+            <li> <label style="font-weight:bold" for="apellido">Apellido</label>   </li>
+            <input id="apellido" name="apellido" placeholder="coloque su apellido" type="text" autofocus="autofocus" />
+            <br />
+            <li><label style="font-weight:bold" for=" password">   Contraseña</li></label>
+            <input  name="pass"type="password" autofocus="autofocus" />
+            <li><label for="oculto" style="font-weight:bold"> Oculto</label> </li>
+            <input  name="ocu"type="hidden" />
+            <li> <label for="campo deshabilitado" style="font-weight:bold">Campo deshabilitado</label>  </li>
+            <input name="desha" type="text" value="campo deshabilitado" disabled autofocus="autofocus" />
+            <li><label for="solo lectura" style="font-weight:bold">Campo solo lectura</label></li>
+            <input name="read solo" readonly="readonly" placeholder="solo lectura" />
+            <li><label for="practica deportes" style="font-weight:bold">Practica deportes</label> </li>
+            <input name="dep" type="checkbox" />
+            <li><label for="artes plasticas" style="font-weight:bold"> Practica artes plásticas</label> </li>
+            <input name="arte" type="checkbox" />
+            <li><label style="font-weight:bold" for=" musica"> Practica música</label> </li>
+            <input name="musica" type="checkbox" />
+            <li><label style="font-weight:bold" for="sexo">Sexo </label> </li>
+            <input type="radio" value="masc" id="Masculino" name="sexo" checked="checked" />Masculino
+            <input type="radio" value="fem" name="sexo" value="Femenino" />Femenino
+            <li> <label for=" estudios" style="font-weight:bold"> Estudios cursados</label></li>
+            <select id="estudios" name="estudios">
+                <option value=" pri" selected="selected">Primaria</option>
+                <option value=" sec" selected="selected">Secundaria</option>
+                <option value=" ter" selected="selected">Terciaria</option>
+                <option value=" uni" selected="selected">Universitaria</option>
+                <option value=" post" selected="selected">Postgrado</option>
+            </select>
+            <li><label for="fecha" style="font-weight:bold">Fecha y Hora </label> </li>
+            <input name="fecha" type ="datetime-local" />
+            <li><label for="color" style="font-weight:bold">Color </label> </li>
+            <input name="color" type="color" />
+            <li><a href="./respuestaFormulario.html" target="_blank"> <input type="submit" value="enviar datos sin validar" /></a></li>
+            <!--                                                                 submit = enviar-->
+            <li><input type="reset"value="BORRAR"</li>
+        </ul>
+    </form>
+    <form action="./respuestaFormulario.html" target="_blank"  method="get>
+        <h2 style="font-weight:bold">Formulario para entradas con validación</h2>
+        <ul>
+            <li><label style="font-weight:bold" for="comentario">Comentario (*)</label> </li>
+            <input name=" comentario" type="text" required="required" />
+            <li><label style="font-weight:bold" for="mail" name="mail">Email(*)</label></li>
+            <input type="email" placeholder="texto@texto" name="mail" required="required" />
+            <li><label style="font-weight:bold" for="nro entero">Número entero limitado</label></li>
+            <input name="nro entero" placeholder="min 0 max 5" type="number" min="0" max="5" required="required" />
+            <li><label style="font-weight:bold" for="url">URL</label> </li>
+            <input type="url" placeholder="http://nombre.dominio" name="url" required="required" />
+            <li><label style="font-weight:bold" for="patron">Patrón de validación</label></li>
+            <input name="patron" type="text" pattern="[a-z]{2}[0-9]{2}" id=" mascara" required title="dos letras luego dos nros entre 1-5" />
+            <br />
+            <li><a href="./respuestaFormulario.html" target="_blank"><input type="submit" value="enviar validar"</a></li>
+            <li><input type="reset" value="BORRAR"</li>
+        </ul>
+
+
+
+    </form>
+    
+
+</body>
+</html>
